@@ -3,7 +3,7 @@ var getAdverbs = require('adverb-where')
 $("#submitButton").click(function() {
   console.log(getAdverbs($("#input").val()))
   var adverbObject = getAdverbs($("#input").val())
-  $('#results').append("<p>Holy crap, you had " + getAdverbs($('#input')).length + " adverbs in your writing!").removeClass('hidden')
+  $('#results').append("<p>Holy crap, you had " + getAdverbs($("#input").val()).length + " adverb(s) in your writing!").removeClass('hidden')
 
 })
 
