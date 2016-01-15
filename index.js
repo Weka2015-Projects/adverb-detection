@@ -1,18 +1,12 @@
 var getAdverbs = require('adverb-where')
 
-var adverbArray = getAdverbs('The hairy gingerly dog interestingly likes wearily to lick his butt hastily')
-//returns object with each adverb located by the (index/offset) of the first character of the word.
-console.log(adverbArray)
+$("#submitButton").click(function() {
+  console.log(getAdverbs($("#input").val()))
+  var adverbObject = getAdverbs($("#input").val())
+  $('#results').append("<p>Holy crap, you had " + getAdverbs($('#input')).length + " adverbs in your writing!").removeClass('hidden')
 
-const getText = getAdverbs('#input')
-console.log(getText)
-
-// var submitText = function(onClick)
-
-$('#submitButton').click(function() {
-  return getText
-  //append new div
 })
+
 
 //onclick of submit button
 //take value of textarea input into function
@@ -21,7 +15,3 @@ $('#submitButton').click(function() {
 //Find index and offset of returned objects
 //append to div for results with highlighted verbs
 //take index/offset of each object and use jquery to change css on them with background and color
-
-
-
-//split by empty spaces
