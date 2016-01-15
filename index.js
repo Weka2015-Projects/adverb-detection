@@ -4,13 +4,25 @@ var adverbArray = getAdverbs('The hairy gingerly dog interestingly likes wearily
 //returns object with each adverb located by the (index/offset) of the first character of the word.
 console.log(adverbArray)
 
-const getText = getAdverbs('#input')
-console.log(getText)
+const wordCount = function (input) {
+  return input[0].value.split(' ').length
+}
 
-// var submitText = function(onClick)
+const adverbCount = function (input) {
+  return getAdverbs(input).length
+}
+
+const checkWriting = function (input) {
+  if(((( getAdverbs(input).length) / input[0].value.length ) * 100 ) > 3 ) {
+    return "Hemingway just turned in his grave!"
+  } else {
+    return "You write like Hemingway, Hooray!"
+  }
+}
 
 $('#submitButton').click(function() {
-  return getText
+console.log( 'Word Count:', wordCount($('#input')), 'Adverb Count:', adverbCount($('#input')), checkWriting($('#input')))
+  // return getText
   //append new div
 })
 
