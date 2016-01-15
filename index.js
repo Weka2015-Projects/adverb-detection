@@ -9,8 +9,17 @@ console.log(getText)
 
 // var submitText = function(onClick)
 
+const checkWriting = function (input) {
+  if(((( getAdverbs(input).length) / input.length ) * 100 ) > 3 ) {
+    return "Hemmingway just turned in his grave!"
+  } else {
+    return "You write like Hemmingway, Hooray!"
+  }
+}
+
 $('#submitButton').click(function() {
-  return getText
+console.log(checkWriting($('#input')))
+  // return getText
   //append new div
 })
 
