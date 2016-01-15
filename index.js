@@ -17,6 +17,14 @@ const checkWriting = function (input) {
   }
 }
 
+const wordCount = function (input) {
+  return input.length
+}
+
+const adverbCount = function (input) {
+  return getAdverbs(input).length
+}
+
 $('#submitButton').click(function() {
 console.log(checkWriting($('#input')))
   // return getText
